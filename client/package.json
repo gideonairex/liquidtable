@@ -5,18 +5,21 @@
   "dependencies": {
     "ag-grid-community": "^21.0.0",
     "ag-grid-react": "^21.0.0",
+    "apollo-boost": "^0.4.2",
     "apollo-client": "^2.6.0",
+    "graphql": "^14.3.1",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
     "react-apollo": "^2.5.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "subscriptions-transport-ws": "^0.9.16"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "sh -ac '. ../.env; react-scripts start'",
+    "build": "sh -ac '. ../.env; react-scripts build'",
+    "test": "sh -ac '. ../.env; react-scripts test'",
+    "eject": "sh -ac '. ../.env; react-scripts eject'"
   },
   "eslintConfig": {
     "extends": "react-app"

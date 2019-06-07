@@ -14,3 +14,29 @@
 
 ### Hasura migrations
 1. `cd hasura-console && hasura migrate apply --access-key=<admin-secret>`
+
+### sample data
+```
+mutation {
+  insert_table_meta(objects: {
+    meta : {
+      make : {
+        headerName: "Make", field:"meta", sortable: true, resizable: true
+      },
+      model : {
+        headerName: "Model", field: "model", sortable: true, resizable: true
+      },
+      ,
+      price : {
+        headerName: "Price", field: "price", sortable: true, resizable: true
+      }
+    },
+    name : "liquid-table"
+  }) {
+    returning {
+      id
+    }
+  }
+}
+
+```
