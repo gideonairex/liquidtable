@@ -1,0 +1,10 @@
+- args:
+    sql: CREATE TABLE "public"."table_result"("id" integer NOT NULL, "table_meta_id"
+      integer NOT NULL, "result" jsonb NOT NULL, PRIMARY KEY ("id") , FOREIGN KEY
+      ("table_meta_id") REFERENCES "public"."table_meta"("id") ON UPDATE cascade ON
+      DELETE cascade);
+  type: run_sql
+- args:
+    name: table_result
+    schema: public
+  type: add_existing_table_or_view

@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "public"."table_meta"("id" serial NOT NULL, "name" text NOT
+      NULL, "meta" jsonb NOT NULL, PRIMARY KEY ("id") );
+  type: run_sql
+- args:
+    name: table_meta
+    schema: public
+  type: add_existing_table_or_view
